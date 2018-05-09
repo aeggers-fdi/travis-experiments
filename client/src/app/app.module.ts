@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { ZipcodeComponent } from './zipcode/zipcode.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ZipcodeComponent
   ],
   imports: [
     BrowserModule

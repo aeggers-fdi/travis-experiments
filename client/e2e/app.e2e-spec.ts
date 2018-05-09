@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('temp App', () => {
+describe('travis-experiments App', () => {
   let page: AppPage;
 
   beforeEach(() => {
