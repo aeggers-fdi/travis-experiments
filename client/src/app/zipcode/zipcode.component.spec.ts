@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { ZipcodeComponent } from './zipcode.component';
 
 describe('ZipcodeComponent', () => {
@@ -8,6 +9,7 @@ describe('ZipcodeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientModule, FormsModule],
       declarations: [ ZipcodeComponent ]
     })
     .compileComponents();
