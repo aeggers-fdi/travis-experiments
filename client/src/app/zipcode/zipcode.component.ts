@@ -28,6 +28,7 @@ export class ZipcodeComponent implements OnInit {
     this.http.get("http://localhost:3000/zipcode?zip=" + zipValue).subscribe({
       next: (x:any) => {
         console.log(x);
+        // TODO: Handle null response
         this.city = x.City;
         this.state = x.State;
       },
