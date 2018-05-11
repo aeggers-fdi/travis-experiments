@@ -6,9 +6,6 @@ var mysql = require('mysql');
 router.get('/', function(req, res, next) {
   // res.send('respond with a resource');
 
-
-
-
   var con = mysql.createConnection({
     host: "localhost",
     user: "test_user",
@@ -20,7 +17,7 @@ router.get('/', function(req, res, next) {
     console.log("Connected!");
   });
 
-  con.query("SELECT * FROM zip_codes.zipcode where Zipcode='80634' and LocationType='PRIMARY';", function (err, result) {
+  con.query("SELECT * FROM zip_codes.zipcode where Zipcode='"+ req.query.zip +"' and LocationType='PRIMARY';", function (err, result) {
       if (err) throw err;
       console.log(result[0]);
       res.send(result[0]);
