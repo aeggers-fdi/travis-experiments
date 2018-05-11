@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 @Component({
   selector: 'app-zipcode',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ZipcodeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public http: HttpClient) { }
 
   ngOnInit() {
+      this.http.get("http://localhost:3000/users").subscribe({
+        next: x => {
+          console.log(x);
+        },
+        complete: () => {
+          console.log("And done");
+        }
+      })
+      return this.http.get("http://localhost:3000/users");
   }
 
 }
