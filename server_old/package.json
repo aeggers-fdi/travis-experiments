@@ -1,0 +1,16 @@
+{
+  "name": "test-server",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.3",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {
+    "express-generator": "^4.16.0"
+  }
+}

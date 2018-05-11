@@ -22,8 +22,8 @@ router.get('/', function(req, res, next) {
 
   con.query("SELECT * FROM zip_codes.zipcode where Zipcode='80634' and LocationType='PRIMARY';", function (err, result) {
       if (err) throw err;
-      console.log(result);
-      res.send(result);
+      console.log(result[0]);
+      res.send(result[0]);
     });
 
 });
